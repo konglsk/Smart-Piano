@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="#BEB9B2"
+    android:backgroundTint="#BEB9B2">
+
+    <!-- Top status and title -->
+    <TextView
+        android:id="@+id/tvConn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="連線狀態：檢查中…"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:padding="8dp"
+        android:contentDescription="Connection status"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Event label -->
+    <TextView
+        android:id="@+id/tvEventsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="事件訊息"
+        android:textSize="13sp"
+        android:textColor="@android:color/darker_gray"
+        android:paddingTop="6dp"
+        android:contentDescription="Event information label"
+        app:layout_constraintTop_toBottomOf="@id/tvConn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Event area (compact) -->
+    <TextView
+        android:id="@+id/tvEvents"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="6dp"
+        android:padding="8dp"
+        android:background="@drawable/event_area_bg"
+        android:text="等待事件..."
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:contentDescription="Event log"
+        app:layout_constraintTop_toBottomOf="@id/tvEventsLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- White keys row (C D E F G A B) -->
+    <LinearLayout
+        android:id="@+id/whiteKeysRow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEvents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.36">
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/KeyButton.White"
+            android:text="C"
+            android:textAllCaps="false"
+            android:contentDescription="Key C" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/KeyButton.White"
+            android:text="D"
+            android:textAllCaps="false"
+            android:contentDescription="Key D" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/KeyButton.White"
+            android:text="E"
+            android:textAllCaps="false"
+            android:contentDescription="Key E" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/KeyButton.White"
+            android:text="F"
+            android:textAllCaps="false"
+            android:contentDescription="Key F" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/KeyButton.White"
+            android:text="G"
+            android:textAllCaps="false"
+            android:contentDescription="Key G" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/KeyButton.White"
+            android:text="A"
+            android:textAllCaps="false"
+            android:contentDescription="Key A" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/KeyButton.White"
+            android:text="B"
+            android:textAllCaps="false"
+            android:contentDescription="Key B" />
+    </LinearLayout>
+
+    <!-- Large ALL OFF button centered below keys -->
+    <Button
+        android:id="@+id/btnAllOff"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="ALL OFF"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:backgroundTint="#7E5948"
+        android:textColor="@android:color/white"
+        android:contentDescription="All off"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/whiteKeysRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <!-- Controls row: BLACK, OCT -, OCT + -->
+    <LinearLayout
+        android:id="@+id/controlsRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnAllOff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ToggleButton
+            android:id="@+id/btnBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:textOn="BLACK ON"
+            android:textOff="BLACK"
+            android:backgroundTint="#332417"
+            android:textColor="#BEB9B2"
+            android:contentDescription="Black key toggle" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnOctDown"
+            style="@style/ControlButton"
+            android:text="OCT -"
+            android:backgroundTint="#7E5948"
+            android:textColor="#BEB9B2"
+            android:contentDescription="Octave down" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnOctUp"
+            style="@style/ControlButton"
+            android:text="OCT +"
+            android:backgroundTint="#555B4A"
+            android:textColor="#BEB9B2"
+            android:contentDescription="Octave up" />
+    </LinearLayout>
+
+    <!-- 錄音區塊 -->
+    <LinearLayout
+        android:id="@+id/record_block"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/controlsRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvRecordTimer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnStartRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="開始錄音"
+            android:backgroundTint="#537A77"
+            android:textColor="#BEB9B2" />
+
+        <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnStopRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止錄音"
+            android:enabled="false"
+            android:backgroundTint="#77534F"
+            android:textColor="#BEB9B2" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

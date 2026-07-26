@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ESP32 Piano</string>
+    <string name="loading_text">Loading...</string>
+    <string name="menu_title">功能選單</string>
+    <string name="melody">旋律教學</string>
+    <string name="handson">手把手教學</string>
+    <string name="metronome">拍子機</string>
+    <string name="back">返回</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/record_list_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#BEB9B2"
+    android:backgroundTint="#BEB9B2">
+
+    <TextView
+        android:id="@+id/tvRecordListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="錄音檔清單"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btnRefreshList"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="重新整理"
+            android:backgroundTint="#555B4A"
+            android:textColor="#BEB9B2" />
+
+        <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnStopPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="停止播放"
+            android:enabled="false"
+            android:backgroundTint="#7E5948"
+            android:textColor="#BEB9B2" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvRecordings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="8dp"
+        android:listSelector="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvRecordListHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="點擊播放；長按分享"
+        android:textSize="12sp"
+        android:paddingTop="8dp"
+        android:textColor="#87827E" />
+</LinearLayout>

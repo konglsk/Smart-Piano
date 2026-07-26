@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#BEB9B2"
+    android:backgroundTint="#BEB9B2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMenuTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textSize="20sp"
+            android:textColor="#332417"
+            android:paddingBottom="12dp" />
+
+        <!-- Control -->
+        <Button
+            android:id="@+id/btnControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#537A77"
+            android:textColor="#BEB9B2"
+            android:text="Record Mode" />
+
+        <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+        <!-- NOSound -->
+        <Button
+            android:id="@+id/btnNOSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#537A77"
+            android:textColor="#BEB9B2"
+            android:text="Teaching Mode" />
+
+        <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+        <!-- Metronome -->
+        <Button
+            android:id="@+id/btnMetronome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#537A77"
+            android:textColor="#BEB9B2"
+            android:text="Metronome" />
+
+        <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+        <!-- Recording List -->
+        <Button
+            android:id="@+id/btnRecordingList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#537A77"
+            android:textColor="#BEB9B2"
+            android:text="Recording List" />
+
+    </LinearLayout>
+</ScrollView>
